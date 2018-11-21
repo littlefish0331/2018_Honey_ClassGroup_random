@@ -15,7 +15,7 @@ library(RJSONIO)
 options(encoding = "UTF-8") # 之後讀取檔案就要改成CP950
 
 shinyUI(fluidPage(
-  # shinythemes::themeSelector(),  # <--- Add this somewhere in the UI
+  shinythemes::themeSelector(),  # <--- Add this somewhere in the UI
   theme = shinytheme("darkly"), # 考慮用 journal, flatly, darkly。
 
   navbarPage( # navbar導航欄的意思
@@ -29,7 +29,11 @@ shinyUI(fluidPage(
                sidebarPanel(hr()),
                
                # Show Upload Student Name List
-               mainPanel()
+               mainPanel(h1("TA is so cute!!"),
+                         h1("LOVE U~\n"),
+                         br(),
+                         HTML('<img src="kiss.png"/>'),
+                         h3("by TA's boyfriend"))
              )
     ),
     
